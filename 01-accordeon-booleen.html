@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec des booléens</title>
-  </head>
-  <body>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+  </head> 
+  <div x-data="{ open: false }">
+    <button @click="open = ! open">Toggle</button>
+ 
+    <span x-show="open" x-transition>
+        Hello 👋
+    </span>
+</div>
+    
     <h1>Accordéon avec des booléens</h1>
   </body>
 </html>
