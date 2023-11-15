@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
-  </head>
-  <div class="accordeon"> </div> x-data="{ open: false }">
-  <button @click="open = ! open">bouton 1</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+</head>
+<div class="accordeon"> </div>
+<section x-data="{ open: false }">
+  <button @click="open = ! open">bouton 2</button>
   <div ... x-transition.duration.500ms> </div>
-  <body>
-    <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-  
-  </body>
-</html>
+  <div ... x-transition.scale>
+    <div ... x-transition.scale.origin.left></div>
+
+    <span x-show="open" x-transition>
+      Texte 2 👋
